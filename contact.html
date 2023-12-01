@@ -1,0 +1,91 @@
+<!DOCTYPE1 html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" contents="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/fd15e242ac.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+ 
+    <div class="container">
+        <nav>
+            <img src="" class="logo">
+            <ul id="sidemenu">                
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="work.html">Works</a></li>
+                <li><a href="contact.html">Contact</a></li>      
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+         <!-- -------contact----------- -->
+ <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>nfnajmudin@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone"></i>018-785-3636</p>
+                <div class="social-icons">
+                    <a href="https://x.com/nfnajmudin"><i class="fa-brands fa-square-x-twitter"></i></a>
+                    <a href="https://instagram.com/nfnajmudin"><i class="fa-brands fa-square-instagram"></i></a>
+                    <a href="https://github.com/nfnajmudin"><i class="fa-brands fa-square-github"></i></a>
+                    <a href="https://www.linkedin.com/in/norfarhan-najmudin-6546352a2/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                
+           </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+        <div class="madeby">
+            <p><i class="fa-solid fa-bolt" style="color: #fbf428;"></i>Made by Norfarhan Najmudin</p>
+        </div>
+ </div>
+ <script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<script>
+
+var sidemeu = document.getElementById("sidemenu");
+
+function openmenu(){
+    sidemeu.style.right = "0";
+}
+function closemenu(){
+    sidemeu.style.right = "-200px";
+}
+
+
+
+</script>
+
+ 
+</body>
+</html>

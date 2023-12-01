@@ -1,0 +1,99 @@
+<!DOCTYPE1 html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" contents="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/fd15e242ac.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+   
+    <div class="container">
+        <nav>
+            <img src="" class="logo">
+            <ul id="sidemenu">                
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="work.html">Works</a></li>
+                <li><a href="contact.html">Contact</a></li>      
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <!-- -------------services----------- -->
+   <div id="services">
+    <div class="container">
+        <h1 class="sub-title">Projects</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-gamepad"></i>
+                <h2>Game Development</h2>
+                <p>Game development merges creative storytelling, visual design,
+                   and intricate coding to craft interactive digital experiences.
+                   It's a dynamic process that blends artistry and technology to
+                   create captivating and immersive games.</p>
+                    <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-crop-simple"></i>
+                <h2>Web Design</h2>
+                <p>Web design involves creating visually appealing and functional
+                   websites. It combines graphic design, user interface (UI)
+                   planning, and coding to ensure seamless navigation and an
+                   engaging online experience for users.</p>
+                    <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store"></i>
+                <h2>App Design</h2>
+                <p>App design is the process of creating user-friendly and visually
+                   appealing interfaces for mobile applications. It involves designing
+                   layouts, selecting colors, and crafting intuitive interactions to 
+                   enhance the overall user experience.</p>
+                    <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+    
+ </div> 
+ <script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<script>
+
+var sidemeu = document.getElementById("sidemenu");
+
+function openmenu(){
+    sidemeu.style.right = "0";
+}
+function closemenu(){
+    sidemeu.style.right = "-200px";
+}
+
+
+
+</script>
+
+ 
+
+ 
+</body>
+</html>

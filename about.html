@@ -1,0 +1,114 @@
+<!DOCTYPE1 html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" contents="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/fd15e242ac.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+   
+    <div class="container">
+        <nav>
+            <img src="" class="logo">
+            <ul id="sidemenu">                
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="work.html">Works</a></li>
+                <li><a href="contact.html">Contact</a></li>      
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <!-- -----------about-------------- -->
+
+   <div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>My name is Norfarhan Najmudin Bin Norfareiz, and I was born in Putrajaya. Right now,
+                   I'm pursuing my Bachelor's degree in Computer Science Software Development at Universiti
+                   Sultan Zainal Abidin. Ever since I was 14, I've been dreaming of becoming a software developer.
+                   It all kicked off when I started soaking in stories from trailblazers like Jack Ma and other inspirational
+                   people around the world, motivating me to carve my own path in the progressive realm of computer science.</p>
+
+                 <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Interests</p>
+                    <p class="tab-links" onclick="opentab('experience')">Future Aim</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                 </div>
+                 <div class="tab-contents active-tab" id="skills"> 
+                    <ul>
+                        <li><span>Game Development</span><br>Designing and Creating Games</li>
+                        <li><span>Web Design</span><br>Web App Development</li>
+                        <li><span>Computer Graphics</span><br>Associated with 3D modeling and digital sculptor</li>
+                    </ul>
+                 </div>
+                 <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Professional Goals</span><br>My professional goals include contributing to public 
+                                  service through a role in government, leveraging my skills to address societal challenges.
+                                  Following this experience, I aim to transition to Singapore for few years before establish a
+                                  software development company dedicated to creating impactful solutions that enhance people's lives.</li>
+                        <li><span></span><br></li>
+                        <li><span></span><br></li>
+                    </ul>
+                 </div>
+                 <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2016-2020</span><br>SM Sains Tapah</li>
+                        <li><span>2021-2022</span><br>Foundation in Engineering UiTM</li>
+                        <li><span>2022-present</span><br>Bachelor of Computer Science Software Development (Hons) UniSZA</li>
+                    </ul>
+                 </div>
+            </div>
+        </div>
+    </div>
+    
+   </div>
+   <script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<script>
+
+var sidemeu = document.getElementById("sidemenu");
+
+function openmenu(){
+    sidemeu.style.right = "0";
+}
+function closemenu(){
+    sidemeu.style.right = "-200px";
+}
+
+
+
+</script>
+
+ 
+</body>
+</html>
+ 
+</body>
+</html>
